@@ -12,7 +12,8 @@ export class DepartmentdisplayComponent implements OnInit {
   description:string='';
   arrdept:Dept[]=[
     new Dept('IT','ftyhtjg'),
-    new Dept('nonIT','tdyhg')
+    new Dept('nonIT','tdyhg'),
+    new Dept('bpo','bbb')
   ];
   constructor(private _router:Router) { }
 
@@ -24,11 +25,24 @@ export class DepartmentdisplayComponent implements OnInit {
     this._router.navigate(['/adddept']);
   }
 
-
-  onClickDelete(item:Dept){
-
-    this.arrdept.splice(this.arrdept.indexOf(item),1);
+  onClickEdit(item:Dept)
+  {
+    this._router.navigate(['/editdept',item.name]);
   }
 
 
+  onClickDelete(item:Dept){
+    var userPreference;
+        if (confirm("Do you want to delete?") == true){
+
+    this.arrdept.splice(this.arrdept.indexOf(item),1);
+
+
+
+        }
+
+      else{
+        userPreference = "Save Cancelled!";
+    }
+  }
 }

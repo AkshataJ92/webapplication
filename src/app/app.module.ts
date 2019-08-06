@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { DepartmentdisplayComponent } from './departmentdisplay/departmentdisplay.component';
 import { AdddeptComponent } from './departmentdisplay/adddept/adddept.component';
 import { routing } from "./app.routing";
+import { EditdeptComponent } from './departmentdisplay/editdept/editdept.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DepartmentdisplayComponent,
-    AdddeptComponent
+    AdddeptComponent,
+    EditdeptComponent
   ],
   imports: [
     BrowserModule, FormsModule, routing
