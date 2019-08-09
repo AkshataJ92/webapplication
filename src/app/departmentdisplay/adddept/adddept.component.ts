@@ -15,9 +15,5 @@ name:string='';
   ngOnInit() {
   }
 
-  onSave(f){
-    this.arr.push(new Dept(this.name,this.description));
-  }
-
 }
 

@@ -6,6 +6,11 @@ import { DepartmentdisplayComponent } from './departmentdisplay/departmentdispla
 import { AdddeptComponent } from './departmentdisplay/adddept/adddept.component';
 import { routing } from "./app.routing";
 import { EditdeptComponent } from './departmentdisplay/editdept/editdept.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+/*@NgModule({
+  imports: [NgbModule.forRoot(), ...],
+  // ...
+})*/
 
 @NgModule({
   declarations: [
@@ -15,7 +20,8 @@ import { EditdeptComponent } from './departmentdisplay/editdept/editdept.compone
     EditdeptComponent
   ],
   imports: [
-    BrowserModule, FormsModule, routing
+    BrowserModule, FormsModule,
+    routing, NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
